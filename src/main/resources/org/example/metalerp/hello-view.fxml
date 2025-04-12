@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.metalerp.HelloController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="240.0" styleClass="left" stylesheets="@CSS/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutY="75.0" opacity="0.3" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutX="25.0" layoutY="33.0" styleClass="opacity" text="MAIN" />
+            <Button alignment="TOP_LEFT" layoutY="63.0" mnemonicParsing="false" styleClass="transparent-button" text="  Dashboard" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button alignment="TOP_LEFT" layoutY="105.0" mnemonicParsing="false" styleClass="transparent-button" text=" Customers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button alignment="TOP_LEFT" layoutY="147.0" mnemonicParsing="false" onAction="#Orders" styleClass="transparent-button" text="  Orders" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/list.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="25.0" layoutY="200.0" styleClass="opacity" text="MANUFACTURING" />
+            <Button alignment="TOP_LEFT" layoutY="234.0" mnemonicParsing="false" styleClass="transparent-button" text="  Inventory">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutY="276.0" mnemonicParsing="false" styleClass="transparent-button" text="  Purchases">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/cart-shopping-fast.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="24.0" layoutY="332.0" styleClass="opacity" text="SYSTEM" />
+            <Button alignment="TOP_LEFT" layoutY="363.0" mnemonicParsing="false" styleClass="transparent-button" text=" Reports">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/sales.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutY="447.0" mnemonicParsing="false" styleClass="transparent-button" text="  Help">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/question.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutY="405.0" mnemonicParsing="false" styleClass="transparent-button" text=" Settings">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Rectangle fx:id="myRect" arcHeight="5.0" arcWidth="5.0" height="18.0" layoutX="182.0" layoutY="117.0" strokeType="INSIDE" styleClass="custom-rectangle" width="25.0" />
+            <Rectangle fx:id="myRect1" arcHeight="5.0" arcWidth="5.0" height="18.0" layoutX="176.0" layoutY="159.0" strokeType="INSIDE" styleClass="custom-rectangle" width="30.0" />
+            <Label layoutX="191.0" layoutY="118.0" styleClass="custom-rectangle-label" text="4" />
+            <Label layoutX="182.0" layoutY="159.0" styleClass="custom-rectangle-label" text="12" />
+
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="713.0" prefWidth="1040.0" styleClass="center" stylesheets="@CSS/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="30.0" layoutY="-1.0" styleClass="overview" text="Overview" />
+            <Label layoutX="32.0" layoutY="33.0" styleClass="overview-text" text="Welcome back, Om! Here's what's happening with your business today.">
+               <font>
+                  <Font size="13.13" />
+               </font>
+            </Label>
+            <MenuButton layoutX="945.6" layoutY="12.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="175.0" styleClass="menu-button" text=" Last 7 Days" AnchorPane.rightAnchor="22.0">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Last 7 Days" />
+                <MenuItem mnemonicParsing="false" text="Last 15 Days" />
+                  <MenuItem mnemonicParsing="false" text="Last 30 Days" />
+              </items>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/Calender.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="13.45" />
+               </font>
+            </MenuButton>
+            <HBox layoutY="59.0" prefHeight="175.0" prefWidth="1040.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+               <children>
+                  <AnchorPane prefHeight="175.0" prefWidth="300.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="23.0" layoutY="10.0" strokeType="INSIDE" styleClass="rectangle-first" width="50.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.30980393290519714" green="0.7647058963775635" blue="0.9686274528503418" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Rectangle>
+                        <Label layoutX="23.0" layoutY="76.0" text="Total Orders">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="96.0" text="148">
+                           <font>
+                              <Font name="System Bold" size="25.59" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="134.0" text="12% from last month" textFill="#4caf50">
+                           <font>
+                              <Font size="12.39" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/top.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="185.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="34.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/order1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="175.0" prefWidth="300.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="23.0" layoutY="10.0" strokeType="INSIDE" styleClass="rectangle-second" width="50.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.30980393290519714" green="0.7647058963775635" blue="0.9686274528503418" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Rectangle>
+                        <Label layoutX="23.0" layoutY="76.0" text="Completed Orders">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="96.0" text="36">
+                           <font>
+                              <Font name="System Bold" size="25.59" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="134.0" text="8% from last week" textFill="#4caf50">
+                           <font>
+                              <Font size="12.39" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/top.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="185.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="33.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/order.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="175.0" prefWidth="300.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="23.0" layoutY="10.0" strokeType="INSIDE" styleClass="rectangle-third" width="50.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.30980393290519714" green="0.7647058963775635" blue="0.9686274528503418" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Rectangle>
+                        <Label layoutX="23.0" layoutY="76.0" text="Purchase Orders Pending">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="96.0" text="17">
+                           <font>
+                              <Font name="System Bold" size="25.59" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="134.0" text="5% from last week" textFill="#f44336">
+                           <font>
+                              <Font size="12.39" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/top1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="185.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="35.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/payment1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="175.0" prefWidth="300.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="23.0" layoutY="10.0" strokeType="INSIDE" styleClass="rectangle-fourth" width="50.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.30980393290519714" green="0.7647058963775635" blue="0.9686274528503418" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Rectangle>
+                        <Label layoutX="23.0" layoutY="76.0" text="Low Stock Materials">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="96.0" text="1,254">
+                           <font>
+                              <Font name="System Bold" size="25.59" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="134.0" text="3% from last week" textFill="#4caf50">
+                           <font>
+                              <Font size="12.39" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/top.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="185.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="33.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/put-away.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children></HBox>
+            <HBox layoutY="245.0" prefHeight="230.0" prefWidth="1040.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="175.0" prefWidth="700.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="608.0" layoutY="16.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="587.0" layoutY="18.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="538.0" layoutY="16.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="16.0" text="Orders per Month">
+                           <font>
+                              <Font name="System Bold" size="15.5" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="640.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="578.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="11.0">
+                           <image>
+                              <Image url="@Icon/expand.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="177.0" fitWidth="387.0" layoutX="159.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/Bar-chart.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="517.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="12.0">
+                           <image>
+                              <Image url="@Icon/downloads.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="175.0" prefWidth="530.0" styleClass="info-container">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="608.0" layoutY="16.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="587.0" layoutY="18.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7fa" height="30.0" layoutX="538.0" layoutY="16.0" stroke="#e0e0e0" strokeType="INSIDE" styleClass="rectangle" width="25.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="16.0" text="Inventory Level Summary">
+                           <font>
+                              <Font name="System Bold" size="15.5" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="640.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0">
+                           <image>
+                              <Image url="@Icon/more.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="578.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="11.0">
+                           <image>
+                              <Image url="@Icon/expand.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="517.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="12.0">
+                           <image>
+                              <Image url="@Icon/downloads.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="107.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/Circle-chart.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8bc34a" height="10.0" layoutX="288.0" layoutY="129.0" stroke="#8bc34a" strokeType="INSIDE" width="10.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcf4d" height="10.0" layoutX="288.0" layoutY="178.0" stroke="#ffcf4d" strokeType="INSIDE" width="10.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3abeff" height="10.0" layoutX="288.0" layoutY="153.0" stroke="#3abeff" strokeType="INSIDE" width="10.0" />
+                        <Label layoutX="203.0" layoutY="100.0" text="Purchase Orders Pending" AnchorPane.leftAnchor="300.0">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3c38" height="10.0" layoutX="288.0" layoutY="105.0" stroke="#ff3c38" strokeType="INSIDE" width="10.0" />
+                        <Label layoutX="183.0" layoutY="124.0" text="Raw Materials" AnchorPane.leftAnchor="300.0">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="187.0" layoutY="148.0" text="Work in Progress" AnchorPane.leftAnchor="300.0">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                        <Label layoutX="187.0" layoutY="173.0" text="Other" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="13.71" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutY="487.0" prefHeight="180.0" prefWidth="1040.0" AnchorPane.bottomAnchor="-10.200000000000045" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="180.0" prefWidth="561.0" styleClass="info-container">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Recent Orders">
+                           <font>
+                              <Font name="System Bold" size="15.5" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="49.0" text="Order ID" textFill="#666666" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.45" />
+                           </font>
+                        </Label>
+                        <Label layoutX="458.0" layoutY="49.0" text="Status" textFill="#666666" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.45" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="79.0" text="#ORD-7629" textFill="#333333" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="395.0" layoutY="14.0" text="View All Orders" textFill="#0288d1" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="System Bold" size="12.91" />
+                           </font>
+                        </Label>
+                        <Label layoutX="358.0" layoutY="49.0" text="Amount" textFill="#666666" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.45" />
+                           </font>
+                        </Label>
+                        <Label layoutX="267.0" layoutY="49.0" text="Date" textFill="#666666" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.45" />
+                           </font>
+                        </Label>
+                        <Label layoutX="158.0" layoutY="49.0" text="Customer" textFill="#666666" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.45" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="99.0" text="#ORD-7629" textFill="#333333" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="32.0" layoutY="132.0" text="#ORD-7629" textFill="#333333" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="130.0" />
+                        <Label layoutX="32.0" layoutY="160.0" text="#ORD-7629" textFill="#333333" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="32.0" layoutY="178.0" text="#ORD-7629" textFill="#333333" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="190.0" />
+                        <Label layoutX="142.0" layoutY="82.0" text="Johnson Motors" textFill="#333333" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="142.0" layoutY="102.0" text="Global Auto Parts" textFill="#333333" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="142.0" layoutY="135.0" text="AutoTech Solutions" textFill="#333333" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="130.0" />
+                        <Label layoutX="142.0" layoutY="163.0" text="Precision Performance" textFill="#333333" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="142.0" layoutY="181.0" text="Fast Track Exhausts" textFill="#333333" AnchorPane.leftAnchor="147.0" AnchorPane.topAnchor="190.0" />
+                        <Label layoutX="290.0" layoutY="82.0" text="Apr 8, 2025" textFill="#333333" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="290.0" layoutY="102.0" text="Apr 7, 2025" textFill="#333333" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="290.0" layoutY="135.0" text="Apr 6, 2025" textFill="#333333" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="130.0" />
+                        <Label layoutX="290.0" layoutY="163.0" text="Apr 5, 2025" textFill="#333333" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="290.0" layoutY="181.0" text="Apr 4, 2025" textFill="#333333" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="190.0" />
+                        <Label layoutX="376.0" layoutY="82.0" text="12,950" textFill="#333333" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="376.0" layoutY="102.0" text="8,340" textFill="#333333" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="376.0" layoutY="135.0" text="15,760" textFill="#333333" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="130.0" />
+                        <Label layoutX="376.0" layoutY="163.0" text="5,890" textFill="#333333" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="376.0" layoutY="181.0" text="9,270" textFill="#333333" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="190.0" />
+                        <Label layoutX="463.0" layoutY="82.0" styleClass="Pending" text="Pending" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="463.0" layoutY="102.0" styleClass="Processing" text="Processing" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="463.0" layoutY="163.0" styleClass="Delayed" text="Delayed" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="463.0" layoutY="181.0" styleClass="Completed" text="Completed" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="190.0" />
+                        <Label layoutX="463.0" layoutY="135.0" styleClass="Completed" text="Completed" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="130.0" />
+                        <Separator layoutX="316.0" layoutY="98.0" prefWidth="200.0" styleClass="seperator" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="92.0" />
+                        <Separator layoutX="298.0" layoutY="132.0" prefWidth="200.0" styleClass="seperator" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="122.0" />
+                        <Separator layoutX="298.0" layoutY="162.0" prefWidth="200.0" styleClass="seperator" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="152.0" />
+                        <Separator layoutX="307.0" layoutY="192.0" prefWidth="200.0" styleClass="seperator" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="182.0" />
+                        <Separator layoutX="310.0" layoutY="224.0" prefWidth="200.0" styleClass="seperator" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="212.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="180.0" prefWidth="1000.0" styleClass="info-container">
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Low">
+                           <font>
+                              <Font name="System Bold" size="15.5" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="87.0" prefWidth="1280.0" styleClass="nav-bar" stylesheets="@CSS/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="240.0" styleClass="Logo">
+               <children>
+                  <Label styleClass="left-Heading" text=" Metal ERP">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/tools-and-utensils.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icon/burger-bar.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <HBox prefHeight="38.0" prefWidth="350.0" styleClass="search-box">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/search1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="12.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="searchField" prefHeight="45.0" prefWidth="288.0" promptText="Search for customers, orders, products..." styleClass="search">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="15.0" left="22.0" top="27.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView id="nav-img" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/email.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView id="nav-img" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/bell.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <AnchorPane prefHeight="68.0" prefWidth="210.0" styleClass="user-profile">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="29.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" styleClass="user-circle" />
+                        <Label layoutX="84.0" layoutY="10.0" prefHeight="23.0" prefWidth="74.0" styleClass="user-heading" text="Om Mane" />
+                        <Label layoutX="74.0" layoutY="29.0" styleClass="user-role" stylesheets="@CSS/Style.css" text="Administrator" textFill="GREY" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="183.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/down-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
