@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1040.0" styleClass="center" stylesheets="@CSS/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.metalerp.HelloController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <Label layoutX="28.0" layoutY="22.0" text="Purchase Orders">
+            <font>
+                <Font name="System Bold" size="23.25" />
+            </font>
+        </Label>
+        <Button layoutX="791.0" layoutY="25.0" mnemonicParsing="false" styleClass="export-button" text="Export" AnchorPane.rightAnchor="125.0">
+            <graphic>
+                <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Icon/export.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="957.0" layoutY="25.0" mnemonicParsing="false" styleClass="new-order-button" text="Create PO" AnchorPane.rightAnchor="20.0">
+            <graphic>
+                <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Icon/Add2.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <HBox layoutX="10.0" layoutY="69.0" prefHeight="100.0" prefWidth="1040.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <AnchorPane prefHeight="100.0" prefWidth="300.0" styleClass="info-container">
+                    <children>
+                        <Label layoutX="16.0" layoutY="13.0" text="Total Purchase Orders">
+                            <font>
+                                <Font size="13.71" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="41.0" text="54">
+                            <font>
+                                <Font name="System Bold" size="25.59" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                </AnchorPane>
+                <AnchorPane prefHeight="100.0" prefWidth="300.0" styleClass="info-container">
+                    <children>
+                        <Label layoutX="16.0" layoutY="13.0" text="Pending Approval">
+                            <font>
+                                <Font size="13.71" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="41.0" text="8">
+                            <font>
+                                <Font name="System Bold" size="25.59" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                </AnchorPane>
+                <AnchorPane prefHeight="100.0" prefWidth="300.0" styleClass="info-container">
+                    <children>
+                        <Label layoutX="16.0" layoutY="13.0" text="Ordered">
+                            <font>
+                                <Font size="13.71" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="41.0" text="32">
+                            <font>
+                                <Font name="System Bold" size="25.59" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                </AnchorPane>
+                <AnchorPane prefHeight="100.0" prefWidth="300.0" styleClass="info-container">
+                    <children>
+                        <Label layoutX="16.0" layoutY="13.0" text="Awaiting Delivery">
+                            <font>
+                                <Font size="13.71" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="41.0" text="14">
+                            <font>
+                                <Font name="System Bold" size="25.59" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                    </HBox.margin>
+                </AnchorPane>
+            </children>
+        </HBox>
+        <AnchorPane layoutX="351.0" layoutY="204.0" prefHeight="50.0" prefWidth="300.0" styleClass="order-info-container" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="204.0">
+            <children>
+                <Label layoutY="10.0" text="Purchase Orders List" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font name="System Bold" size="15.75" />
+                    </font>
+                </Label>
+                <Button layoutX="818.0" layoutY="21.0" mnemonicParsing="false" styleClass="order-info-button" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="5.0">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icon/filter.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="878.0" layoutY="16.0" mnemonicParsing="false" styleClass="order-info-button" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icon/Downloads.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="29.6" layoutY="261.4" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045" AnchorPane.topAnchor="261.4">
+            <children>
+                <MenuButton layoutX="42.4" layoutY="26.4" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="customer-menu" text="All POs" textFill="#666666" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="PO-2025-038" />
+                        <MenuItem mnemonicParsing="false" text="PO-2025-039" />
+                        <MenuItem mnemonicParsing="false" text="PO-2025-040" />
+                  <MenuItem mnemonicParsing="false" text="PO-2025-041" />
+                  <MenuItem mnemonicParsing="false" text="PO-2025-042" />
+                    </items>
+                    <font>
+                        <Font size="13.13" />
+                    </font>
+                </MenuButton>
+                <MenuButton layoutX="217.6" layoutY="26.4" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="customer-menu" text="Vendor" textFill="#666666" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="3.0">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Steel Solutions Inc." />
+                        <MenuItem mnemonicParsing="false" text="MetalWorks Corp." />
+                        <MenuItem mnemonicParsing="false" text="Precision Metals" />
+                  <MenuItem mnemonicParsing="false" text="Industrial Supply Co." />
+                    </items>
+                    <font>
+                        <Font size="13.13" />
+                    </font>
+                </MenuButton>
+                <MenuButton layoutX="362.4" layoutY="29.599999999999998" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" styleClass="customer-menu" text="Status" textFill="#666666" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="3.0">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Ordered" />
+                        <MenuItem mnemonicParsing="false" text="Delivered" />
+                        <MenuItem mnemonicParsing="false" text="Delayed" />
+                  <MenuItem mnemonicParsing="false" text="Pending" />
+                    </items>
+                    <font>
+                        <Font size="13.13" />
+                    </font>
+                </MenuButton>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="29.6" layoutY="324.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="100.0" layoutY="20.0" text="PO Number" textFill="#666666" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Status" textFill="#666666" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Amount" textFill="#666666" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Delivery Date" textFill="#666666" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Ordered Date" textFill="#666666" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="Vendor" textFill="#666666" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="Actions" textFill="#666666" AnchorPane.leftAnchor="805.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="System Bold" size="13.78" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="29.6" layoutY="374.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap2" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 17, 2025" textFill="#333333" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 10, 2025" textFill="#333333" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="PO-2025-042" textFill="#333333" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="244.0" layoutY="30.0" text="Steel Solutions Inc." textFill="#333333" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="\$8,750.00" textFill="#333333" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="800.0" layoutY="4.0" styleClass="Ordered" text="Ordered" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" styleClass="edit-Generate-Invoic-button" text="Edit" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="872.0" layoutY="11.0" mnemonicParsing="false" styleClass="Mark-Delivered-button" text="Mark Delivered" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="3.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="30.0" layoutY="427.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap2" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 15, 2025" textFill="#333333" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 8, 2025" textFill="#333333" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="PO-2025-041" textFill="#333333" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="580.0" layoutY="4.0" styleClass="Ordered" text="Ordered" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="244.0" layoutY="30.0" text="MetalWorks Corp." textFill="#333333" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="\$12,340.00" textFill="#333333" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+            <Button layoutX="816.0" layoutY="11.0" mnemonicParsing="false" styleClass="edit-Generate-Invoic-button" text="Edit" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="888.0" layoutY="11.0" mnemonicParsing="false" styleClass="Mark-Delivered-button" text="Mark Delivered" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="3.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="30.0" layoutY="480.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap2" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 12, 2025" textFill="#333333" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 7, 2025" textFill="#333333" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="PO-2025-040" textFill="#333333" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="681.0" layoutY="16.0" styleClass="Delivered" text="Delivered" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="244.0" layoutY="30.0" text="Precision Metals" textFill="#333333" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="\$5,890.00" textFill="#333333" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+            <Button layoutX="831.0" layoutY="17.0" mnemonicParsing="false" styleClass="View-Contact-Approve-button" text="View" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="884.0" layoutY="15.0" mnemonicParsing="false" styleClass="edit-Generate-Invoic-button" text="Generate Invoice" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="3.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="30.0" layoutY="533.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap2" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 15, 2025" textFill="#333333" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 5, 2025" textFill="#333333" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="PO-2025-039" textFill="#333333" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="665.0" layoutY="20.0" styleClass="Delayed" text="Delayed" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="244.0" layoutY="30.0" text="Industrial Supply Co." textFill="#333333" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="\$7,420.00" textFill="#333333" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+            <Button layoutX="794.0" layoutY="14.0" mnemonicParsing="false" styleClass="edit-Generate-Invoic-button" text="Edit" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="847.0" layoutY="12.0" mnemonicParsing="false" styleClass="View-Contact-Approve-button" text="Contact Vendor" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="3.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="30.0" layoutY="586.0" prefHeight="50.0" prefWidth="200.0" styleClass="order-ap2" AnchorPane.leftAnchor="29.6" AnchorPane.rightAnchor="19.200000000000045">
+            <children>
+                <CheckBox layoutX="14.0" layoutY="17.0" mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 10, 2025" textFill="#333333" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="110.0" layoutY="30.0" text="Apr 3, 2025" textFill="#333333" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="234.0" layoutY="20.0" text="PO-2025-038" textFill="#333333" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="244.0" layoutY="30.0" text="Steel Solutions Inc." textFill="#333333" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="40.0" text="\$9,630.00" textFill="#333333" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font size="13.78" />
+                    </font>
+                </Label>
+            <Button layoutX="797.0" layoutY="17.0" mnemonicParsing="false" styleClass="Cancel-button" text="Cancel" AnchorPane.leftAnchor="910.0" AnchorPane.topAnchor="3.0" />
+                <Label layoutX="816.0" layoutY="19.0" styleClass="Pending" text="Pending" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="857.0" layoutY="17.0" mnemonicParsing="false" styleClass="View-Contact-Approve-button" text="Approve" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="916.0" layoutY="17.0" mnemonicParsing="false" styleClass="View-Contact-Approve-button" text="View" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="3.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="65.0" layoutY="639.0" prefHeight="50.0" prefWidth="300.0" styleClass="order-info-container-last" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0">
+            <children>
+                <Button layoutX="684.0" layoutY="8.0" mnemonicParsing="false" styleClass="number-button" text="1" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="724.0" layoutY="8.0" mnemonicParsing="false" styleClass="number-button" text="2" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="762.0" layoutY="18.0" mnemonicParsing="false" styleClass="number-button" text="3" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="798.0" layoutY="8.0" mnemonicParsing="false" styleClass="number-button" text="4" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="647.0" layoutY="8.0" mnemonicParsing="false" styleClass="arrow-button" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="10.0">
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icon/chevron-left-solid.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button layoutX="866.0" layoutY="18.0" mnemonicParsing="false" styleClass="arrow-button" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icon/chevron-right-solid.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <Label layoutX="64.0" layoutY="-2.0" text="Showing 1 to 7 of 54 entries" textFill="#666666" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="13.23" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

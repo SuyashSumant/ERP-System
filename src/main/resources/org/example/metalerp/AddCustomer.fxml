@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1040.0" styleClass="center" stylesheets="@CSS/Style.css" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.metalerp.HelloController">
+    <children>
+        <Label layoutX="28.0" layoutY="22.0" text="Add New Customer" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="23.25" />
+            </font>
+        </Label>
+        <Button layoutX="957.0" layoutY="25.0" mnemonicParsing="false" styleClass="Cancel-button-second" text="Cancel" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+            <graphic>
+                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Icon/Cancel.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <AnchorPane layoutX="351.0" layoutY="70.4" prefHeight="190.0" prefWidth="990.0" styleClass="order-info-container" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+            <children>
+                <Label layoutY="10.0" text="Customer Information" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="15.5" />
+                    </font>
+                </Label>
+            <Separator layoutX="21.0" layoutY="60.0" prefWidth="200.0" styleClass="separator-vertical" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+            <Label layoutX="21.0" layoutY="75.0" text="Name" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="31.200000000000003" layoutY="111.2" prefHeight="26.0" prefWidth="470.0" promptText="Enter contact person's name" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0" />
+            <Label layoutX="588.0" layoutY="70.0" text="Company Name " textFill="#555555" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.topAnchor="35.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="517.0" layoutY="101.0" prefHeight="26.0" prefWidth="470.0" promptText="Enter company name" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+            <Label layoutX="15.0" layoutY="144.0" text="Email" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="96.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="26.0" layoutY="180.0" prefHeight="26.0" prefWidth="470.0" promptText="Enter email address" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="121.0" />
+            <Label layoutX="17.0" layoutY="213.0" text="Phone Number " textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="157.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="27.0" layoutY="249.0" prefHeight="26.0" prefWidth="470.0" promptText="Enter phone number" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="182.0" />
+            <Label layoutX="584.0" layoutY="208.0" text="GST Number " textFill="#555555" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.topAnchor="157.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="513.0" layoutY="239.0" prefHeight="26.0" prefWidth="470.0" promptText="Enter GST number" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="182.0" />
+            <Label layoutX="570.0" layoutY="292.0" text="Format: 15-digit GSTIN number" textFill="#666666" AnchorPane.leftAnchor="510.0" AnchorPane.topAnchor="214.0">
+               <font>
+                  <Font size="11.44" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="266.0" text="Address Information" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="230.0">
+               <font>
+                  <Font name="System Bold" size="15.5" />
+               </font>
+            </Label>
+            <Separator layoutX="29.0" layoutY="316.0" prefWidth="200.0" styleClass="separator-vertical" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="255.0" />
+            <Label layoutX="29.0" layoutY="331.0" text="Address" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="265.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="39.0" layoutY="368.0" prefHeight="26.0" prefWidth="470.0" promptText="Address Line 1" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="290.0" />
+            <TextField layoutX="34.0" layoutY="436.0" prefHeight="26.0" prefWidth="470.0" promptText="Address Line 2 (Optional)" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="339.0" />
+            <Label layoutX="25.0" layoutY="469.0" text="City" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="375.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="35.0" layoutY="505.0" prefHeight="26.0" prefWidth="310.0" promptText="Enter city" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="400.0" />
+            <Label layoutX="592.0" layoutY="464.0" text="Postal Code " textFill="#555555" AnchorPane.leftAnchor="679.2" AnchorPane.topAnchor="375.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="521.0" layoutY="495.0" prefHeight="26.0" prefWidth="310.0" promptText="Enter postal code" styleClass="Add-New-Customer-textfield" AnchorPane.leftAnchor="679.2" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="400.0" />
+            <MenuButton layoutX="599.0" layoutY="428.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="310.0" styleClass="select-state" text="Select state" AnchorPane.leftAnchor="348.0" AnchorPane.topAnchor="400.0">
+              <items>
+                  <!-- States -->
+                  <MenuItem mnemonicParsing="false" text="Andhra Pradesh" />
+                  <MenuItem mnemonicParsing="false" text="Arunachal Pradesh" />
+                  <MenuItem mnemonicParsing="false" text="Assam" />
+                  <MenuItem mnemonicParsing="false" text="Bihar" />
+                  <MenuItem mnemonicParsing="false" text="Chhattisgarh" />
+                  <MenuItem mnemonicParsing="false" text="Goa" />
+                  <MenuItem mnemonicParsing="false" text="Gujarat" />
+                  <MenuItem mnemonicParsing="false" text="Haryana" />
+                  <MenuItem mnemonicParsing="false" text="Himachal Pradesh" />
+                  <MenuItem mnemonicParsing="false" text="Jharkhand" />
+                  <MenuItem mnemonicParsing="false" text="Karnataka" />
+                  <MenuItem mnemonicParsing="false" text="Kerala" />
+                  <MenuItem mnemonicParsing="false" text="Madhya Pradesh" />
+                  <MenuItem mnemonicParsing="false" text="Maharashtra" />
+                  <MenuItem mnemonicParsing="false" text="Manipur" />
+                  <MenuItem mnemonicParsing="false" text="Meghalaya" />
+                  <MenuItem mnemonicParsing="false" text="Mizoram" />
+                  <MenuItem mnemonicParsing="false" text="Nagaland" />
+                  <MenuItem mnemonicParsing="false" text="Odisha" />
+                  <MenuItem mnemonicParsing="false" text="Punjab" />
+                  <MenuItem mnemonicParsing="false" text="Rajasthan" />
+                  <MenuItem mnemonicParsing="false" text="Sikkim" />
+                  <MenuItem mnemonicParsing="false" text="Tamil Nadu" />
+                  <MenuItem mnemonicParsing="false" text="Telangana" />
+                  <MenuItem mnemonicParsing="false" text="Tripura" />
+                  <MenuItem mnemonicParsing="false" text="Uttar Pradesh" />
+                  <MenuItem mnemonicParsing="false" text="Uttarakhand" />
+                  <MenuItem mnemonicParsing="false" text="West Bengal" />
+                  <!-- Union Territories -->
+                  <MenuItem mnemonicParsing="false" text="Andaman and Nicobar Islands" />
+                  <MenuItem mnemonicParsing="false" text="Chandigarh" />
+                  <MenuItem mnemonicParsing="false" text="Dadra and Nagar Haveli and Daman and Diu" />
+                  <MenuItem mnemonicParsing="false" text="Delhi" />
+                  <MenuItem mnemonicParsing="false" text="Jammu and Kashmir" />
+                  <MenuItem mnemonicParsing="false" text="Ladakh" />
+                  <MenuItem mnemonicParsing="false" text="Lakshadweep" />
+                  <MenuItem mnemonicParsing="false" text="Puducherry" />
+
+              </items>
+            </MenuButton>
+            <Label layoutX="35.0" layoutY="479.0" text="State" textFill="#555555" AnchorPane.leftAnchor="348.0" AnchorPane.topAnchor="375.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="478.0" text="Additional Information" AnchorPane.topAnchor="442.0">
+               <font>
+                  <Font name="System Bold" size="15.5" />
+               </font>
+            </Label>
+            <Separator layoutX="18.0" layoutY="515.0" prefWidth="200.0" styleClass="separator-vertical" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="467.0" />
+            <Label layoutX="171.0" layoutY="605.0" text="Notes" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="538.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="591.0" layoutY="547.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="470.0" styleClass="select-state" text="Select industry" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="502.0">
+               <items>
+                   <MenuItem mnemonicParsing="false" text="Automotive Manufacturing" />
+                   <MenuItem mnemonicParsing="false" text="Auto Parts Retail" />
+                   <MenuItem mnemonicParsing="false" text="Vehicle Service &amp; Repair" />
+                   <MenuItem mnemonicParsing="false" text="Aftermarket &amp; Customization" />
+                   <MenuItem mnemonicParsing="false" text="E-commerce Auto Parts" />
+                   <MenuItem mnemonicParsing="false" text="Logistics &amp; Transportation" />
+                   <MenuItem mnemonicParsing="false" text="Export &amp; Trade" />
+                   <MenuItem mnemonicParsing="false" text="Defense &amp; Government Vehicles" />
+                   <MenuItem mnemonicParsing="false" text="Racing &amp; Performance Tuning" />
+                   <MenuItem mnemonicParsing="false" text="Prototyping &amp; R&amp;D" />
+                   <MenuItem mnemonicParsing="false" text="Educational &amp; Technical Institutes" />
+               </items>
+            </MenuButton>
+            <Label layoutX="244.0" layoutY="553.0" text="Industry" textFill="#555555" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="531.0" layoutY="547.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="470.0" styleClass="select-state" text="Regular" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="502.0">
+               <items>
+                   <MenuItem mnemonicParsing="false" text="Regular" />
+                   <MenuItem mnemonicParsing="false" text="New" />
+                   <MenuItem mnemonicParsing="false" text="Dealer" />
+                   <MenuItem mnemonicParsing="false" text="Workshop" />
+                   <MenuItem mnemonicParsing="false" text="Retailer" />
+               </items>
+            </MenuButton>
+            <Label layoutX="480.0" layoutY="532.0" text="State " textFill="#555555" AnchorPane.leftAnchor="508.80000000000007" AnchorPane.topAnchor="477.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="31.200000000000003" layoutY="585.6" prefWidth="958.0" promptText="Enter any additional notes about this customer" styleClass="Add-New-Customer-textfield" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="575.0" />
+            <Button layoutX="730.0" layoutY="433.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" styleClass="new-order-button" text="Save Customer" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/Save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="753.0" layoutY="623.0" mnemonicParsing="false" styleClass="Cancel-button-second" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="165.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
